@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NotesMiniApp</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_content">Content</string>
+    <string name="btn_save">Save</string>
+    <string name="error_empty">Title and content cannot be empty</string>
+</resources>
