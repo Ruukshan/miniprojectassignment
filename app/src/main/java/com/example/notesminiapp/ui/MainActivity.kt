@@ -35,6 +35,9 @@ class MainActivity : AppCompatActivity() {
             onLongClick = { note ->
                 noteViewModel.delete(note)
                 Toast.makeText(this, "Note deleted", Toast.LENGTH_SHORT).show()
+            },
+            onToggleComplete = { note ->
+                noteViewModel.toggleComplete(note)
             }
         )
 

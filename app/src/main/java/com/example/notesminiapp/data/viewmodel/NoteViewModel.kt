@@ -32,4 +32,8 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
     fun delete(note: Note) = viewModelScope.launch(Dispatchers.IO) {
         repository.delete(note)
     }
+
+    fun toggleComplete(note: Note) = viewModelScope.launch(Dispatchers.IO) {
+        repository.toggleComplete(note.id, !note.isCompleted)
+    }
 }

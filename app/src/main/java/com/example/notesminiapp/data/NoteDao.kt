@@ -17,4 +17,7 @@ interface NoteDao {
 
     @Delete
     suspend fun delete(note: Note)
+
+    @Query("UPDATE notes SET isCompleted = :isCompleted WHERE id = :id")
+    suspend fun toggleComplete(id: Int, isCompleted: Boolean)
 }
