@@ -1,6 +1,7 @@
 package com.example.notesminiapp.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -23,9 +24,12 @@ class AddEditNoteActivity : AppCompatActivity() {
         noteViewModel = ViewModelProvider(this)[NoteViewModel::class.java]
 
         noteId = intent.getIntExtra("NOTE_ID", -1)
+        val incomingTitle = intent.getStringExtra("NOTE_TITLE") ?: ""
+        val incomingContent = intent.getStringExtra("NOTE_CONTENT") ?: ""
+
         if (noteId != -1) {
-            binding.etTitle.setText(intent.getStringExtra("NOTE_TITLE"))
-            binding.etContent.setText(intent.getStringExtra("NOTE_CONTENT"))
+            binding.etTitle.setText(incomingTitle)
+            binding.etContent.setText(incomingContent)
         }
 
         binding.btnSave.setOnClickListener {
@@ -37,7 +41,19 @@ class AddEditNoteActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val note = Note(id = noteId, title = title, content = content)
+            val note = if (noteId == -1) {
+                Note(
+                    title = title,
+                    content = content
+                )
+            } else {
+                Note(
+                    id = noteId,
+                    title = title,
+                    content = content
+                )
+            }
+
             if (noteId == -1) {
                 noteViewModel.insert(note)
             } else {
