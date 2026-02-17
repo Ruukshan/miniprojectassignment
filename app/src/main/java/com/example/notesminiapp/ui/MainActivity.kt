@@ -2,13 +2,11 @@ package com.example.notesminiapp.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notesminiapp.databinding.ActivityMainBinding
-import com.example.notesminiapp.data.Note
 import com.example.notesminiapp.ui.viewmodel.NoteViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -50,7 +48,6 @@ class MainActivity : AppCompatActivity() {
 
         noteViewModel.allNotes.observe(this) { notes ->
             adapter.submitList(notes)
-            adapter.notifyDataSetChanged()  // ← temporary force refresh (remove later)
         }
 
         binding.fabAdd.setOnClickListener {

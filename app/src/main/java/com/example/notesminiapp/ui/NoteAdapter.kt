@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesminiapp.data.Note
-import com.example.notesminiapp.databinding.ItemNoteBinding  // Use ViewBinding
+import com.example.notesminiapp.databinding.ItemNoteBinding
 import java.text.SimpleDateFormat
 import java.util.Locale
 
