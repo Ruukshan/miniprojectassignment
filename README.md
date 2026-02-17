@@ -15,6 +15,9 @@ A simple and intuitive Android application for managing daily tasks and notes. T
 ![Screenshot_20260217_181334_NotesMiniApp](https://github.com/user-attachments/assets/da5e50d6-d139-4e14-9901-749fa87b03ab)
 
 ### Add a note
+![Screenshot_20260217_184300_NotesMiniApp](https://github.com/user-attachments/assets/26615355-323d-4710-b6cf-9a1c33ac907a)
+
+### Edit a note
 ![Screenshot_20260217_181349_NotesMiniApp](https://github.com/user-attachments/assets/91e8b0d5-d0ab-4a14-afa7-9135ddbb83a1)
 
 ### Complete state
