@@ -20,6 +20,9 @@ class AddEditNoteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAddEditNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
+
+        supportActionBar?.title = if (noteId == -1) "Add Note" else "Edit Note"
 
         noteViewModel = ViewModelProvider(this)[NoteViewModel::class.java]
 
