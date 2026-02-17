@@ -11,7 +11,17 @@ A simple and intuitive Android application for managing daily tasks and notes. T
 - **Real-time UI Updates**: Utilizes LiveData to observe database changes and update the user interface automatically.
 
 ## UI Screenshots
+### List view
+![Screenshot_20260217_181334_NotesMiniApp](https://github.com/user-attachments/assets/da5e50d6-d139-4e14-9901-749fa87b03ab)
 
+### Add a note
+![Screenshot_20260217_181349_NotesMiniApp](https://github.com/user-attachments/assets/91e8b0d5-d0ab-4a14-afa7-9135ddbb83a1)
+
+### Complete state
+![Screenshot_20260217_181402_NotesMiniApp](https://github.com/user-attachments/assets/3c64ac61-fa83-49a8-bb95-c563ab98509f)
+
+### Home UI
+![Screenshot_20260217_181310_NotesMiniApp](https://github.com/user-attachments/assets/4aa9edca-f057-4b7a-a08d-1a127010b579)
 
 ## Design Choices
 
